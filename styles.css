@@ -53,15 +53,10 @@ nav {
     gap: 0.5rem;
 }
 
-.logo::before {
-    content: "";
+.nav-logo {
     width: 40px;
     height: 40px;
-    background-image: url('app_logo.PNG');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -99,9 +94,25 @@ main {
     text-align: center;
 }
 
+.hero-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
 .hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin: 0;
     background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -340,6 +351,15 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+    }
+    
+    .hero-branding {
+        gap: 1rem;
+    }
+    
+    .hero-logo {
+        width: 60px;
+        height: 60px;
     }
     
     .hero h1 {
