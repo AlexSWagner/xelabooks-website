@@ -45,7 +45,7 @@ nav {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -78,6 +78,11 @@ nav {
 
 .nav-links a:hover {
     color: var(--secondary-orange);
+}
+
+.nav-links a.active {
+    color: var(--secondary-orange);
+    font-weight: 600;
 }
 
 /* Main Content */
