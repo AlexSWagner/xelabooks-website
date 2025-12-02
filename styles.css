@@ -1,15 +1,18 @@
 /* Audiobook Buddy Website Styles */
 :root {
-    --primary-blue: #4fc3f7;
-    --secondary-orange: #ff7043;
-    --dark-blue: #1e3a8a;
-    --light-blue: #e3f2fd;
-    --text-dark: #2c3e50;
-    --text-light: #ffffff;
-    --gray-light: #f8f9fa;
-    --gray-medium: #6c757d;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --primary-blue: #64b5f6;
+    --secondary-orange: #ff8a65;
+    --dark-blue: #0d47a1;
+    --darker-blue: #0a2e5e;
+    --background-dark: #121212;
+    --surface-dark: #1e1e1e;
+    --surface-light: #2a2a2a;
+    --text-dark: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #808080;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --border-light: #404040;
 }
 
 * {
@@ -22,6 +25,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
+    background-color: var(--background-dark);
     overflow-x: hidden;
 }
 
@@ -89,7 +93,7 @@ main {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--light-blue) 0%, var(--gray-light) 100%);
+    background: linear-gradient(135deg, var(--surface-dark) 0%, var(--darker-blue) 100%);
     padding: 4rem 0;
     text-align: center;
 }
@@ -122,7 +126,7 @@ main {
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    color: var(--gray-medium);
+    color: var(--text-secondary);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -133,6 +137,11 @@ main {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* Download section specific styling */
+#download .cta-buttons {
+    margin-top: 2rem;
 }
 
 .btn {
@@ -163,14 +172,14 @@ main {
 /* Features Section */
 .features {
     padding: 4rem 0;
-    background: var(--text-light);
+    background: var(--background-dark);
 }
 
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark-blue);
+    color: var(--text-dark);
 }
 
 .features-grid {
@@ -180,12 +189,13 @@ main {
 }
 
 .feature-card {
-    background: var(--gray-light);
+    background: var(--surface-dark);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     transition: transform 0.3s ease;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-light);
 }
 
 .feature-card:hover {
@@ -200,11 +210,11 @@ main {
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--dark-blue);
+    color: var(--primary-blue);
 }
 
 .feature-card p {
-    color: var(--gray-medium);
+    color: var(--text-secondary);
 }
 
 /* Contact Page Styles */
@@ -214,7 +224,7 @@ main {
 }
 
 .contact-info h2 {
-    color: var(--dark-blue);
+    color: var(--text-dark);
     margin-bottom: 1rem;
     font-size: 2rem;
 }
@@ -224,12 +234,13 @@ main {
 }
 
 .contact-method {
-    background: var(--gray-light);
+    background: var(--surface-dark);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     box-shadow: var(--shadow);
     margin-bottom: 2rem;
+    border: 1px solid var(--border-light);
 }
 
 .contact-icon {
@@ -238,7 +249,7 @@ main {
 }
 
 .contact-method h3 {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     margin-bottom: 1rem;
 }
 
@@ -247,7 +258,7 @@ main {
 }
 
 .feedback-types h3, .response-info h3 {
-    color: var(--primary-blue);
+    color: var(--text-dark);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -268,16 +279,17 @@ main {
     margin: 0 auto;
     padding: 3rem 2rem;
     line-height: 1.8;
+    background: var(--background-dark);
 }
 
 .privacy-content h1, .deletion-content h1 {
-    color: var(--dark-blue);
+    color: var(--text-dark);
     margin-bottom: 0.5rem;
     font-size: 2.5rem;
 }
 
 .privacy-content .last-updated, .deletion-content .last-updated {
-    color: var(--gray-medium);
+    color: var(--text-muted);
     font-style: italic;
     margin-bottom: 2rem;
 }
@@ -287,12 +299,12 @@ main {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    border-bottom: 2px solid var(--light-blue);
+    border-bottom: 2px solid var(--border-light);
     padding-bottom: 0.5rem;
 }
 
 .privacy-content h3, .deletion-content h3 {
-    color: var(--dark-blue);
+    color: var(--text-dark);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -317,8 +329,8 @@ main {
 
 /* Specific to Deletion Page */
 .email-cta {
-    background-color: var(--gray-light);
-    border: 1px solid var(--light-blue);
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-light);
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -329,7 +341,7 @@ main {
 .email-cta p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    color: var(--gray-medium);
+    color: var(--text-secondary);
 }
 
 .email-cta .btn-email {
